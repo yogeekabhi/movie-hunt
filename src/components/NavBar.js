@@ -1,24 +1,15 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class NavBar extends Component {
-    render() {
-        return (
-            <div>
-                <nav className="navbar navbar-light bg-dark mb-5">
-                    <div className="container">
-                        <div className="navbar-header">
-                            <a className="navbar-brand text-white text-lg brand-text" href="#">
-                                Movie Hunt
-                            </a>
-                        </div>
-                        <ul className="navbar-nav ml-auto text-light d-inline-block">
-                            <li className="nav-item d-inline-block mr-4">
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-            
-        )
-    }
+  render() {
+    return (
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+             <h1 style={{fontFamily : "sans-serif", color: "sienna"}}>Movie Hunter</h1>
+          </div>
+        </nav>
+      </div>
+    );
+  }
 }
