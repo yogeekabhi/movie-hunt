@@ -12,12 +12,12 @@ export const searchMovie = (text) => {
 export const fetchMovie = (text) => (dispatch) => {
   axios
     .get(
-      `https://api.themoviedb.org/3/search/movie?api_key=1cef15161644ebe2d66bb92ac498cd5f&language=en-US&query=${text}&include_adult=false`
+      `https://api.themoviedb.org/3/search/movie?api_key=1cef15161644ebe2d66bb92ac498cd5f&language=en-US&query=${text}`
     )
     .then((response) =>
       dispatch({
         type: FETCH_MOVIE,
-        payload: response.data,
+        payload: response.data.results,
       })
     )
     .catch((err) => console.log(err));

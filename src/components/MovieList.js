@@ -5,40 +5,18 @@ import MovieCard from "./MovieCard";
 class MovieList extends Component {
   render() {
 
-    console.log(this.props.movies);
-     const move = this.props.movies.map((movie, index) => {
-            return (
-              <div className="col-md-3 mb-5">
-                <div className="card card-body bg-dark text-center h-100">
-                  <img
-                    className="w-100 mb-2"
-                    src={movie.poster_path}
-                    alt="Movie Cover"
-                  />
-                  <h5 className="text-light card-title">
-                    {movie.title} - {movie.release_date}
-                  </h5>
-                  <a className="btn btn-primary" href="#">
-                    Movie Details
-                    <i className="fas fa-chevron-right" />
-                  </a>
-                </div>
-              </div>
-            );
-          })
-
+    const content = this.props.movies.map((movie, index) => <MovieCard key={index} movie={movie}/>)
 
     return (
     <div className="row">
-        MOVIE LIST
-        {move}
+        {content}
         </div>
     )
   }
 }
 
 const mapStateToProps = (state) => ({
-  movies: state.movies.movies.results
+  movies: state.movies.movies
 });
 
 export default connect(mapStateToProps)(MovieList);

@@ -6,7 +6,7 @@ export default class NavBar extends Component {
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="container-fluid">
-             <h1 style={{fontFamily : "sans-serif", color: "sienna"}}>Movie Hunter</h1>
+             <h1 style={{fontFamily : "sans-serif", color: "sienna"}}>Movie Hunt</h1>
           </div>
         </nav>
       </div>
